@@ -6,8 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const audio = document.getElementById('background-music');
     const musicToggle = document.getElementById('music-toggle');
     const body = document.body;
+    const countdownElement = document.querySelector('.simply-countdown');
 
-    // Menonaktifkan scroll saat overlay terbuka
+    // Menonaktifkan scroll
     body.classList.add('no-scroll');
 
     // Mengisi nama tamu dari URL
@@ -23,11 +24,11 @@ document.addEventListener('DOMContentLoaded', function() {
         bottomNav.style.display = 'flex';
         body.classList.remove('no-scroll');
         
-        // Memulai musik
+        AOS.refresh(); // Refresh AOS untuk memulai animasi
+
         audio.play().catch(error => {
-            console.log("Autoplay was prevented. User needs to interact with the page first.");
+            console.log("Autoplay dicegah oleh browser.");
         });
-        
         musicToggle.classList.remove('paused');
     });
 
@@ -35,6 +36,40 @@ document.addEventListener('DOMContentLoaded', function() {
     musicToggle.addEventListener('click', function() {
         if (audio.paused) {
             audio.play();
+            musicToggle.classList.remove('paused');
+        } else {
+            audio.pause();
+            musicToggle.classList.add('paused');
+        }
+    });
+
+    // Countdown Timer
+    const targetDate = new Date('2025-10-25T08:00:00'); 
+    
+    function updateCountdown() {
+        const now = new Date();
+        const diff = targetDate - now;
+
+        if (diff <= 0) {
+            countdownElement.innerHTML = "<h4>Acara Telah Berlangsung</h4>";
+            return;
+        }
+
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML = `
+            <div><span>${d}</span>Hari</div>
+            <div><span>${h}</span>Jam</div>
+            <div><span>${m}</span>Menit</div>
+            <div><span>${s}</span>Detik</div>
+        `;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+});            audio.play();
             musicToggle.classList.remove('paused');
         } else {
             audio.pause();
