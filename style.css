@@ -1,0 +1,246 @@
+/* Custom CSS for Wedding Invitation */
+
+:root {
+    --bg-color: #f8f9fa;
+    --primary-color: #6c757d; /* Warna abu-abu netral */
+    --secondary-color: #d4af37; /* Warna emas untuk aksen */
+    --text-color: #333;
+    --font-heading: 'Sacramento', cursive;
+    --font-body: 'Work Sans', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+/* --- Helper Classes --- */
+.text-primary { color: var(--primary-color) !important; }
+.text-secondary { color: var(--secondary-color) !important; }
+.bg-primary { background-color: var(--primary-color) !important; }
+.bg-secondary { background-color: var(--secondary-color) !important; }
+
+/* --- Opening Overlay --- */
+.opening-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/cover.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    color: white;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+.opening-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.opening-overlay .text-center {
+    z-index: 1;
+}
+.opening-overlay h1 {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+}
+.opening-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('images/cover.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.hero h1, .hero h4, .hero p {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 6rem;
+}
+.hero a {
+    background-color: var(--secondary-color);
+    color: white;
+    border: 1px solid var(--secondary-color);
+}
+.hero a:hover {
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+/* --- Countdown --- */
+.simply-countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+.simply-countdown > div {
+    text-align: center;
+    padding: 0.5rem;
+}
+.simply-countdown > div span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* --- General Section Styling --- */
+section {
+    padding: 6rem 0;
+}
+section h2 {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+
+/* --- Couple Section --- */
+.couple {
+    background-color: #fff;
+}
+.couple-info img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.couple-info h3 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+
+/* --- Info, RSVP, Gifts Section --- */
+.info, .rsvp, .gifts {
+    background-color: var(--bg-color);
+}
+.info .card, .gifts .card {
+    background-color: white;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+.info .card-header {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.info .card-body i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+.info .alamat {
+    font-size: 1.1rem;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
+/* --- Gallery Section --- */
+.gallery {
+    background-color: #fff;
+}
+
+/* --- Footer --- */
+footer {
+    padding: 3rem 0;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* --- Music & Navigation --- */
+.music-toggle {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    animation: spin 8s linear infinite;
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.music-toggle.paused {
+    animation-play-state: paused;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 0;
+    z-index: 1000;
+    display: none; /* Initially hidden */
+}
+.bottom-nav a {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+.bottom-nav a:hover {
+    color: var(--secondary-color);
+}
+
+
+/* --- Responsive Breakpoints --- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+    section h2 {
+        font-size: 3rem;
+    }
+    .couple-info .col-lg-6 {
+        margin-bottom: 2rem;
+    }
+}

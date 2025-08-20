@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan | Rizky & Anisa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="opening-overlay">
+        <div class="text-center">
+            <h3>The Wedding Of</h3>
+            <h1>Rizky & Anisa</h1>
+            <p>Kepada Bapak/Ibu/Saudara/i,</p>
+            <p class="guest-name">Nama Tamu</p> <button id="open-invitation" class="btn btn-outline-light">Buka Undangan</button>
+        </div>
+    </div>
+    
+    <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
+        <main>
+            <h4>Kepada Bapak/Ibu/Saudara/i, </h4>
+            <h1>Rizky & Anisa</h1>
+            <p>Akan melangsungkan resepsi pernikahan dalam:</p>
+            <div class="simply-countdown"></div>
+            <a href="#info" class="btn btn-lg mt-4" onClick="enableScroll()">Lihat Undangan</a>
+        </main>
+    </section>
+
+    <main id="main-content" style="display: none;">
+        <section id="couple" class="couple">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h2 data-aos="fade-up">Pasangan Mempelai</h2>
+                        <p data-aos="fade-up" data-aos-delay="100">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan kami:</p>
+                    </div>
+                </div>
+
+                <div class="row couple-info">
+                    <div class="col-lg-6 text-center" data-aos="fade-right" data-aos-duration="1000">
+                        <img src="images/mempelai-pria.jpg" alt="Mempelai Pria" class="img-fluid rounded-circle">
+                        <h3>Rizky Pratama</h3>
+                        <p>Putra dari Bpk. H. Ahmad & Ibu Hj. Fatimah</p>
+                    </div>
+                    <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-duration="1000">
+                        <img src="images/mempelai-wanita.jpg" alt="Mempelai Wanita" class="img-fluid rounded-circle">
+                        <h3>Anisa Putri</h3>
+                        <p>Putri dari Bpk. H. Santoso & Ibu Hj. Wulandari</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="info" class="info">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-10 text-center">
+                        <h2 data-aos="fade-up">Informasi Acara</h2>
+                        <p class="alamat" data-aos="fade-up" data-aos-delay="100">Diselenggarakan di: <br> Gedung Graha Sabha Pramana, Yogyakarta</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-md-5 col-10" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card text-center">
+                            <div class="card-header">Akad Nikah</div>
+                            <div class="card-body">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6">
+                                        <i class="bi bi-clock-fill d-block"></i>
+                                        <span>08:00 - 10:00</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <i class="bi bi-calendar3 d-block"></i>
+                                        <span>Sabtu, 25 Oktober 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-10" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card text-center">
+                            <div class="card-header">Resepsi</div>
+                            <div class="card-body">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6">
+                                        <i class="bi bi-clock-fill d-block"></i>
+                                        <span>11:00 - Selesai</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <i class="bi bi-calendar3 d-block"></i>
+                                        <span>Sabtu, 25 Oktober 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center mt-4" data-aos="fade-up" data-aos-delay="400">
+                        <a href="https://maps.app.goo.gl/abcdef12345" target="_blank" class="btn btn-light">Lihat Peta Lokasi</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-10 text-center">
+                        <h2 data-aos="fade-up">Galeri Kami</h2>
+                        <p data-aos="fade-up" data-aos-delay="100">Momen-momen berharga yang kami abadikan.</p>
+                    </div>
+                </div>
+                <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-2 justify-content-center">
+                    <div class="col mt-3" data-aos="zoom-in" data-aos-delay="100">
+                        <a href="images/galeri1.jpg" data-toggle="lightbox" data-gallery="mygallery">
+                            <img src="images/galeri1.jpg" alt="Foto 1" class="img-fluid w-100 rounded">
+                        </a>
+                    </div>
+                    </div>
+            </div>
+        </section>
+        
+        <section id="rsvp" class="rsvp">
+            <div class="container">
+                 <div class="row justify-content-center">
+                    <div class="col-md-8 col-10 text-center">
+                        <h2 data-aos="fade-up">Konfirmasi & Ucapan</h2>
+                        <p data-aos="fade-up" data-aos-delay="100">Kami akan sangat berbahagia jika Anda bisa hadir. Mohon konfirmasi kehadiran dan berikan ucapan terbaik Anda melalui tautan di bawah ini.</p>
+                        <a href="https://forms.gle/abcdef12345" target="_blank" class="btn btn-light mt-3" data-aos="zoom-in">Isi Form RSVP</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gifts" class="gifts">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-10 text-center">
+                        <h2 data-aos="fade-up">Hadiah Pernikahan</h2>
+                        <p data-aos="fade-up" data-aos-delay="100">Doa restu Anda adalah hadiah terindah bagi kami. Namun, jika Anda ingin memberikan tanda kasih, kami telah menyediakan fitur di bawah ini untuk memudahkan Anda.</p>
+                        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-md-6">
+                                <div class="card text-center">
+                                    <div class="card-header">BCA</div>
+                                    <div class="card-body">
+                                        <p class="card-text">1234-5678-90 a/n Rizky Pratama</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <small>Terima kasih atas doa dan kehadirannya.</small><br>
+                    <small>Rizky & Anisa</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <audio id="background-music" loop>
+        <source src="background-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="bottom-nav" class="bottom-nav">
+        <a href="#hero"><i class="bi bi-house-fill"></i></a>
+        <a href="#couple"><i class="bi bi-heart-fill"></i></a>
+        <a href="#info"><i class="bi bi-calendar2-check-fill"></i></a>
+        <a href="#gallery"><i class="bi bi-images"></i></a>
+        <a href="#rsvp"><i class="bi bi-envelope-fill"></i></a>
+    </div>
+
+    <div id="music-toggle" class="music-toggle">
+        <i class="bi bi-disc-fill"></i>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+    <script>
+    // Script sederhana untuk countdown
+    const countdownElement = document.querySelector('.simply-countdown');
+    const targetDate = new Date('2025-10-25T08:00:00'); // Ganti tanggal target di sini
+
+    function updateCountdown() {
+        const now = new Date();
+        const diff = targetDate - now;
+
+        if (diff <= 0) {
+            countdownElement.innerHTML = "<h4>Acara Telah Berlangsung</h4>";
+            return;
+        }
+
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML = `
+            <div><span>${d}</span>Hari</div>
+            <div><span>${h}</span>Jam</div>
+            <div><span>${m}</span>Menit</div>
+            <div><span>${s}</span>Detik</div>
+        `;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+    </script>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          once: true, // Animasi hanya berjalan sekali
+          duration: 1000
+      });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
