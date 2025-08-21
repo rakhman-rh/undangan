@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Undangan Pernikahan | John & Jane</title>
+    <title>Undangan Pernikahan | Rizky & Anisa</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,184 +21,20 @@
     <div class="opening-overlay">
         <div class="text-center">
             <h3>The Wedding Of</h3>
-            <h1>John & Jane</h1>
+            <h1>Rizky & Anisa</h1>
             <p>Kepada Bapak/Ibu/Saudara/i,</p>
-            <p class="guest-name">Nama Tamu</p>
-            <button id="open-invitation" class="btn btn-outline-light">Buka Undangan</button>
+            <p class="guest-name">Nama Tamu</p> <button id="open-invitation" class="btn btn-outline-light">Buka Undangan</button>
         </div>
     </div>
     
     <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
         <main>
             <h4>Kepada Bapak/Ibu/Saudara/i, </h4>
-            <h1>John & Jane</h1>
+            <h1>Rizky & Anisa</h1>
             <p>Akan melangsungkan resepsi pernikahan dalam:</p>
             <div class="simply-countdown"></div>
-            <a href="#couple" class="btn btn-lg mt-4">Lihat Undangan</a>
+            <a href="#info" class="btn btn-lg mt-4" onClick="enableScroll()">Lihat Undangan</a>
         </main>
-    </section>
-
-    <main id="main-content" style="display: none;">
-        <section id="couple" class="couple">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-12">
-                        <h2 data-aos="fade-up">Pasangan Mempelai</h2>
-                        <p data-aos="fade-up" data-aos-delay="100">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan kami:</p>
-                    </div>
-                </div>
-
-                <div class="row couple-info mt-5">
-                    <div class="col-lg-6 text-center" data-aos="fade-right" data-aos-duration="1000">
-                        <img src="https://i.ibb.co/S607MhJ/groom-placeholder.jpg" alt="Mempelai Pria" class="img-fluid rounded-circle">
-                        <h3>John Doe</h3>
-                        <p>Putra dari Bpk. John Senior & Ibu Jane Senior</p>
-                    </div>
-                    <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-duration="1000">
-                        <img src="https://i.ibb.co/3kM4b1Z/bride-placeholder.jpg" alt="Mempelai Wanita" class="img-fluid rounded-circle">
-                        <h3>Jane Smith</h3>
-                        <p>Putri dari Bpk. Smith Senior & Ibu Smith Senior</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="info" class="info">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8 col-10 text-center">
-                        <h2 data-aos="fade-up">Informasi Acara</h2>
-                        <p class="alamat" data-aos="fade-up" data-aos-delay="100">Diselenggarakan di: <br> Hotel Bintang Lima, Jakarta</p>
-                    </div>
-                </div>
-                <div class="row justify-content-center mt-4">
-                    <div class="col-md-5 col-10" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card text-center">
-                            <div class="card-header">Akad Nikah</div>
-                            <div class="card-body">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-6">
-                                        <i class="bi bi-clock-fill d-block"></i>
-                                        <span>08:00 - 10:00</span>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <i class="bi bi-calendar3 d-block"></i>
-                                        <span>Sabtu, 25 Oktober 2025</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-10" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card text-center">
-                            <div class="card-header">Resepsi</div>
-                            <div class="card-body">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-6">
-                                        <i class="bi bi-clock-fill d-block"></i>
-                                        <span>11:00 - Selesai</span>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <i class="bi bi-calendar3 d-block"></i>
-                                        <span>Sabtu, 25 Oktober 2025</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 text-center mt-4" data-aos="fade-up" data-aos-delay="400">
-                        <a href="https://maps.app.goo.gl/u315S4p2XyGz7e4o6" target="_blank" class="btn btn-light">Lihat Peta Lokasi</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="gallery" class="gallery">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8 col-10 text-center">
-                        <h2 data-aos="fade-up">Galeri Kami</h2>
-                        <p data-aos="fade-up" data-aos-delay="100">Momen-momen berharga yang kami abadikan.</p>
-                    </div>
-                </div>
-                <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-2 justify-content-center">
-                    <div class="col mt-3" data-aos="zoom-in" data-aos-delay="100"><img src="https://i.ibb.co/3m5n0mN/gallery1.jpg" alt="Foto 1" class="img-fluid w-100 rounded"></div>
-                    <div class="col mt-3" data-aos="zoom-in" data-aos-delay="200"><img src="https://i.ibb.co/9hYfgyQ/gallery2.jpg" alt="Foto 2" class="img-fluid w-100 rounded"></div>
-                    <div class="col mt-3" data-aos="zoom-in" data-aos-delay="300"><img src="https://i.ibb.co/F8tC0B5/gallery3.jpg" alt="Foto 3" class="img-fluid w-100 rounded"></div>
-                    <div class="col mt-3" data-aos="zoom-in" data-aos-delay="400"><img src="https://i.ibb.co/gDFd1tK/gallery4.jpg" alt="Foto 4" class="img-fluid w-100 rounded"></div>
-                    <div class="col mt-3" data-aos="zoom-in" data-aos-delay="500"><img src="https://i.ibb.co/z5V3D4f/gallery5.jpg" alt="Foto 5" class="img-fluid w-100 rounded"></div>
-                    <div class="col mt-3" data-aos="zoom-in" data-aos-delay="600"><img src="https://i.ibb.co/ssbV9Yg/gallery6.jpg" alt="Foto 6" class="img-fluid w-100 rounded"></div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="rsvp" class="rsvp">
-            <div class="container">
-                 <div class="row justify-content-center">
-                    <div class="col-md-8 col-10 text-center">
-                        <h2 data-aos="fade-up">Konfirmasi & Ucapan</h2>
-                        <p data-aos="fade-up" data-aos-delay="100">Kami akan sangat berbahagia jika Anda bisa hadir. Mohon konfirmasi kehadiran dan berikan ucapan terbaik Anda melalui tautan di bawah ini.</p>
-                        <a href="https://forms.gle/N2s1i23wA3eYv5gG7" target="_blank" class="btn btn-light mt-3" data-aos="zoom-in">Isi Form RSVP</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="gifts" class="gifts">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8 col-10 text-center">
-                        <h2 data-aos="fade-up">Hadiah Pernikahan</h2>
-                        <p data-aos="fade-up" data-aos-delay="100">Doa restu Anda adalah hadiah terindah bagi kami. Namun, jika Anda ingin memberikan tanda kasih, kami telah menyediakan fitur di bawah ini untuk memudahkan Anda.</p>
-                        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
-                            <div class="col-md-6">
-                                <div class="card text-center">
-                                    <div class="card-header">BCA</div>
-                                    <div class="card-body">
-                                        <p class="card-text">1234-5678-90 a/n John Doe</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col text-center">
-                    <small>Terima kasih atas doa dan kehadirannya.</small><br>
-                    <small>John & Jane</small>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <audio id="background-music" loop>
-        <source src="https://pixabay.com/music/download/music-for-a-film-166291.mp3" type="audio/mpeg">
-    </audio>
-
-    <div id="bottom-nav" class="bottom-nav">
-        <a href="#hero"><i class="bi bi-house-fill"></i></a>
-        <a href="#couple"><i class="bi bi-heart-fill"></i></a>
-        <a href="#info"><i class="bi bi-calendar2-check-fill"></i></a>
-        <a href="#gallery"><i class="bi bi-images"></i></a>
-        <a href="#rsvp"><i class="bi bi-envelope-fill"></i></a>
-    </div>
-
-    <div id="music-toggle" class="music-toggle">
-        <i class="bi bi-disc-fill"></i>
-    </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script> AOS.init({ once: true, duration: 1000 }); </script>
-    <script src="script.js"></script>
-</body>
-    </html>        </main>
     </section>
 
     <main id="main-content" style="display: none;">
